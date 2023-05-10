@@ -21,8 +21,8 @@ const items = document.querySelectorAll('.banner-img');
 const dots = document.querySelectorAll('.dot')
 const nbSlide = items.length;
 let tagLine = document.querySelector('#tagline');
-const suivant = document.querySelector('.arrow_right');
-const precedent = document.querySelector('.arrow_left');
+const next = document.querySelector('.arrow_right');
+const previous = document.querySelector('.arrow_left');
 let count = 0;
 
 dots.forEach((button, i) => {
@@ -46,7 +46,7 @@ dots[0].classList.add("dot_selected");
 
 
 
-function slideSuivante(){
+function nextSlide(){
 	items[count].classList.remove('active');
 	dots[count].classList.remove('dot_selected');
 	if(count < nbSlide - 1){
@@ -62,9 +62,9 @@ function slideSuivante(){
 	//console.log(count);
 	
 }
-suivant.addEventListener('click', slideSuivante)
+next.addEventListener('click', nextSlide)
 
-function slidePrecedente(){
+function prevSlide(){
 	items[count].classList.remove('active');
 	dots[count].classList.remove('dot_selected');
 	if(count > 0){
@@ -80,7 +80,7 @@ function slidePrecedente(){
 	// console.log(count);
 	
 }
-precedent.addEventListener('click', slidePrecedente)
+previous.addEventListener('click', prevSlide)
 
 function keyPress(e){
 	//console.log(e);
