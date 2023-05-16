@@ -57,10 +57,8 @@ function nextSlide(){
 
 	items[count].classList.add('active');
 	dots[count].classList.add('dot_selected');
-	tagLine = slides[count].tagLine;
-	document.querySelector('#tagline').innerHTML = tagLine;
+	document.querySelector('#tagline').innerHTML = slides[count].tagLine;
 	//console.log(count);
-	
 }
 next.addEventListener('click', nextSlide)
 
@@ -75,8 +73,7 @@ function prevSlide(){
 
 	items[count].classList.add('active');
 	dots[count].classList.add('dot_selected');
-	tagLine = slides[count].tagLine;
-	document.querySelector('#tagline').innerHTML = tagLine;
+	document.querySelector('#tagline').innerHTML = slides[count].tagLine;
 	// console.log(count);
 	
 }
