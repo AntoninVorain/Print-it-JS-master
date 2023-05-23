@@ -83,9 +83,9 @@ function keyPress(e){
 	//console.log(e);
 	
 	if(e.keyCode === 37){
-			slidePrecedente();
+		prevSlide();
 	} else if(e.keyCode === 39){
-			slideSuivante();
+			nextSlide();
 	}
 }
 document.addEventListener('keydown', keyPress)
